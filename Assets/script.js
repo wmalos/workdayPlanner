@@ -28,5 +28,17 @@ $(document).ready(function () {
                 $(this).removeClass("present");
                 $(this).addClass("past");
         }
+        else if (blockTime === currentTime) {
+            $(this).removeClass("past");
+            $(this).removeClass("future");
+            $(this).addClass("present");
+        }
+        else (blockTime > currentTime) {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+
+        }
     }
+    
 })
