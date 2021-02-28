@@ -23,22 +23,22 @@ $(document).ready(function () {
         })
 
         // checks the time to set the background colors
-        if (blockTime < currentTime) {
-            $(this).removeClass("future");
-            $(this).removeClass("present");
-            $(this).addClass("past");
-        }
-        else if (blockTime === currentTime) {
-            $(this).removeClass("past");
-            $(this).removeClass("future");
-            $(this).addClass("present");
-        }
-        else (blockTime > currentTime) {
-            $(this).removeClass("present");
-            $(this).removeClass("past");
-            $(this).addClass("future");
+            if (blockTime < currentTime) {
+                $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+            }
+            else if (blockTime === currentTime) {
+                $(this).removeClass("past");
+                $(this).removeClass("future");
+                $(this).addClass("present");
+            }
+            else {
+                $(this).removeClass("present");
+                $(this).removeClass("past");
+                $(this).addClass("future");
 
+            }
         }
-    }
     
 })
