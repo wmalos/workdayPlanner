@@ -12,4 +12,9 @@ $(document).ready(function () {
         // saves text to the specific time to your local storage
         localStorage.setItem(time, text);
     })
+
+    function timeTrack() {
+        // gets current hour
+        var currentTime = moment().hour();
+    }
 })
