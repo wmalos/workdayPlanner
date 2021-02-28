@@ -16,5 +16,17 @@ $(document).ready(function () {
     function timeTrack() {
         // gets current hour
         var currentTime = moment().hour();
+
+        // creates a loop
+        $(".time-block").each(function () {
+            var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+        })
+
+        // checks the time to set the background colors
+        if (blockTime < currentTime) {
+            $(this).removeClass("future");
+                $(this).removeClass("present");
+                $(this).addClass("past");
+        }
     }
 })
