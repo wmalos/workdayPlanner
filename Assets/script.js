@@ -25,8 +25,8 @@ $(document).ready(function () {
         // checks the time to set the background colors
         if (blockTime < currentTime) {
             $(this).removeClass("future");
-                $(this).removeClass("present");
-                $(this).addClass("past");
+            $(this).removeClass("present");
+            $(this).addClass("past");
         }
         else if (blockTime === currentTime) {
             $(this).removeClass("past");
