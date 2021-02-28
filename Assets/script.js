@@ -20,9 +20,9 @@ $(document).ready(function () {
         // creates a loop
         $(".time-block").each(function () {
             var blockTime = parseInt($(this).attr("id").split("hour")[1]);
-        })
+        
 
-        // checks the time to set the background colors
+            // checks the time to set the background colors
             if (blockTime < currentTime) {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
@@ -39,6 +39,22 @@ $(document).ready(function () {
                 $(this).addClass("future");
 
             }
-        }
+        })
     
+    // gets item from local storage
+    $("#hour8 .description").val(localStorage,getItem("hour8"));
+    $("#hour9 .description").val(localStorage,getItem("hour9"));
+    $("#hour10 .description").val(localStorage,getItem("hour10"));
+    $("#hour11 .description").val(localStorage,getItem("hour11"));
+    $("#hour12 .description").val(localStorage,getItem("hour12"));
+    $("#hour13 .description").val(localStorage,getItem("hour13"));
+    $("#hour14 .description").val(localStorage,getItem("hour14"));
+    $("#hour15 .description").val(localStorage,getItem("hour15"));
+    $("#hour16 .description").val(localStorage,getItem("hour16"));
+    $("#hour17 .description").val(localStorage,getItem("hour17"));
+
+    // call function
+    timeTrack();
+
+
 })
